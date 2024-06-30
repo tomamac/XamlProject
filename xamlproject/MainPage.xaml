@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="xamlproject.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    NavigationPage.HasNavigationBar="False">
+
+    <Grid x:Name="roomWall" BackgroundColor="#111">
+        <StackLayout
+            x:Name="room"
+            Grid.Row="0"
+            BackgroundColor="#111"
+            Scale="0.5">
+            <BoxView
+                x:Name="light"
+                Margin="-470"
+                HeightRequest="500"
+                HorizontalOptions="CenterAndExpand"
+                Opacity="0"
+                RotationX="40"
+                VerticalOptions="Start"
+                WidthRequest="200"
+                Color="Orange" />
+            <AbsoluteLayout>
+                <BoxView AbsoluteLayout.LayoutBounds="-115,820,640,5" Color="Black" />
+                <BoxView
+                    AbsoluteLayout.LayoutBounds="-660,1045,640,5"
+                    Rotation="-45"
+                    Color="black" />
+                <BoxView
+                    AbsoluteLayout.LayoutBounds="430,1045,640,5"
+                    Rotation="45"
+                    Color="black" />
+                <BoxView
+                    AbsoluteLayout.LayoutBounds="-515,420,800,5"
+                    Rotation="90"
+                    Color="black" />
+                <BoxView
+                    AbsoluteLayout.LayoutBounds="125,420,800,5"
+                    Rotation="90"
+                    Color="black" />
+                <!--  Image buttons and labels  -->
+                <Image
+                    x:Name="frame1"
+                    AbsoluteLayout.LayoutBounds="245,485,130,130"
+                    Opacity="0.05"
+                    Source="frame" />
+                <Image
+                    x:Name="frame2"
+                    AbsoluteLayout.LayoutBounds="18,485,146,120"
+                    Opacity="0.05"
+                    Source="frame2" />
+                <ImageButton
+                    x:Name="achievement"
+                    AbsoluteLayout.LayoutBounds="30,500,120,90"
+                    Opacity="0.05"
+                    Source="achievement" />
+                <Label
+                    x:Name="achievementLabel"
+                    AbsoluteLayout.LayoutBounds="25,600"
+                    FontSize="24"
+                    HorizontalTextAlignment="Center"
+                    Opacity="0"
+                    Text="Achievement"
+                    TextColor="White" />
+                <ImageButton
+                    x:Name="profile"
+                    AbsoluteLayout.LayoutBounds="260,500,100,100"
+                    Opacity="0.05"
+                    Source="a" />
+                <Label
+                    x:Name="profileLabel"
+                    AbsoluteLayout.LayoutBounds="275,600"
+                    FontSize="24"
+                    HorizontalTextAlignment="Center"
+                    Opacity="0"
+                    Text="Profile"
+                    TextColor="White" />
+                <Image
+                    x:Name="desktop"
+                    AbsoluteLayout.LayoutBounds="0,630,400,250"
+                    Opacity="0.05"
+                    Source="desktop">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="desktopTapped" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label
+                    x:Name="desktopLabel"
+                    AbsoluteLayout.LayoutBounds="160,875"
+                    FontSize="24"
+                    HorizontalTextAlignment="Center"
+                    Opacity="0"
+                    Text="Use PC"
+                    TextColor="White" />
+            </AbsoluteLayout>
+        </StackLayout>
+        <StackLayout x:Name="glass" BackgroundColor="#B222" />
+        <StackLayout
+            x:Name="wall"
+            Padding="20"
+            BackgroundColor="#0000">
+            <Grid
+                Margin="0,100,0,20"
+                HorizontalOptions="Center"
+                VerticalOptions="Center">
+
+                <Label
+                    x:Name="darkLabel"
+                    FontSize="24"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    Text="ในนี้มืดจังเลยนะฮะ"
+                    TextColor="White"
+                    VerticalTextAlignment="Center" />
+                <BoxView
+                    x:Name="lightSwitchPanel"
+                    Grid.Row="1"
+                    CornerRadius="20"
+                    HeightRequest="100"
+                    HorizontalOptions="Center"
+                    WidthRequest="100"
+                    Color="Gray" />
+                <Button
+                    x:Name="lightSwitch"
+                    Grid.Row="1"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    WidthRequest="50" />
+            </Grid>
+            <Grid
+                x:Name="arrowGrid"
+                ColumnSpacing="-12"
+                HorizontalOptions="Center"
+                RowSpacing="10"
+                VerticalOptions="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20" />
+                    <ColumnDefinition Width="20" />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="10" />
+                </Grid.RowDefinitions>
+
+                <BoxView Rotation="-45" Color="White" />
+                <BoxView
+                    Grid.Column="1"
+                    Rotation="45"
+                    Color="White" />
+
+                <BoxView
+                    Grid.Row="1"
+                    Rotation="-45"
+                    Color="White" />
+                <BoxView
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Rotation="45"
+                    Color="White" />
+
+                <BoxView
+                    Grid.Row="2"
+                    Rotation="-45"
+                    Color="White" />
+                <BoxView
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Rotation="45"
+                    Color="White" />
+            </Grid>
+            <Label
+                x:Name="lightSwitchLabel"
+                Margin="0,20,0,0"
+                FontSize="20"
+                HorizontalOptions="Center"
+                Text="กดเพื่อเปิดไฟ"
+                TextColor="White" />
+        </StackLayout>
+
+    </Grid>
+</ContentPage>

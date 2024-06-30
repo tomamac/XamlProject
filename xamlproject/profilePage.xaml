@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="xamlproject.profilePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    NavigationPage.HasNavigationBar="False">
+    <StackLayout
+        Padding="20"
+        BackgroundColor="#222"
+        Spacing="10">
+        <Frame
+            CornerRadius="75"
+            HeightRequest="100"
+            HorizontalOptions="Center"
+            WidthRequest="100">
+            <Image Source="a">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="profileTapped" />
+                </Image.GestureRecognizers>
+            </Image>
+        </Frame>
+        <Label
+            FontAttributes="Bold"
+            FontSize="24"
+            HorizontalOptions="Center"
+            HorizontalTextAlignment="Center"
+            Text="Welcome to my profile"
+            TextColor="White" />
+        <Grid RowSpacing="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <!--  Name  -->
+            <Label
+                Grid.ColumnSpan="5"
+                FontSize="20"
+                HorizontalTextAlignment="Center"
+                Text="วรัช วีระพรรณ์ (เมฆ)"
+                TextColor="White"
+                VerticalOptions="Center" />
+
+            <!--  Line breaker  -->
+            <BoxView
+                Grid.Row="1"
+                Grid.RowSpan="7"
+                Grid.Column="2"
+                HorizontalOptions="Center"
+                WidthRequest="3"
+                Color="White" />
+
+            <!--  Education  -->
+            <Label
+                Grid.Row="1"
+                Grid.ColumnSpan="2"
+                FontSize="20"
+                HorizontalTextAlignment="Center"
+                Text="Education"
+                TextColor="White" />
+            <Label
+                Grid.Row="2"
+                Grid.ColumnSpan="2"
+                FontSize="14"
+                HorizontalTextAlignment="Center"
+                Text="2016 - 2021"
+                TextColor="white"
+                VerticalOptions="End" />
+            <Label
+                Grid.Row="3"
+                Grid.ColumnSpan="2"
+                FontSize="16"
+                HorizontalTextAlignment="Center"
+                Text="Panyapiwat Technological College"
+                TextColor="white" />
+            <Label
+                Grid.Row="4"
+                Grid.ColumnSpan="2"
+                FontSize="14"
+                HorizontalTextAlignment="Center"
+                Text="(ปวช. - ปวส)"
+                TextColor="White" />
+            <Label
+                Grid.Row="5"
+                Grid.ColumnSpan="2"
+                FontSize="14"
+                HorizontalTextAlignment="Center"
+                Text="2021 - Present"
+                TextColor="White"
+                VerticalOptions="End" />
+            <Label
+                Grid.Row="6"
+                Grid.ColumnSpan="2"
+                FontSize="16"
+                HorizontalTextAlignment="Center"
+                Text="Thai-Nichi Institute of Technology"
+                TextColor="White" />
+            <Label
+                Grid.Row="7"
+                Grid.ColumnSpan="2"
+                FontSize="14"
+                HorizontalTextAlignment="Center"
+                Text="(ปริญญาตรี)"
+                TextColor="White" />
+
+            <!--  Skills  -->
+            <Label
+                Grid.Row="1"
+                Grid.Column="3"
+                Grid.ColumnSpan="2"
+                FontSize="20"
+                HorizontalTextAlignment="Center"
+                Text="Skills"
+                TextColor="White" />
+            <Image
+                Grid.Row="2"
+                Grid.Column="3"
+                Source="cs" />
+            <Label
+                Grid.Row="3"
+                Grid.Column="3"
+                FontSize="14"
+                HorizontalTextAlignment="Center"
+                Text="C#"
+                TextColor="White" />
+            <Image
+                Grid.Row="2"
+                Grid.Column="4"
+                Source="java" />
+            <Label
+                Grid.Row="3"
+                Grid.Column="4"
+                FontSize="14"
+                HorizontalTextAlignment="center"
+                Text="Java"
+                TextColor="White" />
+            <Image
+                Grid.Row="4"
+                Grid.Column="3"
+                Source="html" />
+            <Label
+                Grid.Row="5"
+                Grid.Column="3"
+                FontSize="14"
+                HorizontalTextAlignment="Center"
+                Text="HTML"
+                TextColor="White" />
+            <Image
+                Grid.Row="4"
+                Grid.Column="4"
+                Source="css" />
+            <Label
+                Grid.Row="5"
+                Grid.Column="4"
+                FontSize="14"
+                HorizontalTextAlignment="Center"
+                Text="CSS"
+                TextColor="White" />
+            <Image
+                Grid.Row="6"
+                Grid.Column="3"
+                Source="bootstrap" />
+            <Label
+                Grid.Row="7"
+                Grid.Column="3"
+                FontSize="14"
+                HorizontalTextAlignment="Center"
+                Text="Bootstrap"
+                TextColor="White" />
+            <Image
+                Grid.Row="6"
+                Grid.Column="4"
+                Source="flutter" />
+            <Label
+                Grid.Row="7"
+                Grid.Column="4"
+                FontSize="14"
+                HorizontalTextAlignment="Center"
+                Text="Flutter"
+                TextColor="White" />
+            <Label
+                Grid.Row="8"
+                Grid.ColumnSpan="5"
+                FontSize="20"
+                HorizontalTextAlignment="Center"
+                Text="Socials"
+                TextColor="White" />
+            <Image
+                Grid.Row="9"
+                Grid.Column="1"
+                Source="facebook">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="facebookTapped" />
+                </Image.GestureRecognizers>
+            </Image>
+            <Image
+                Grid.Row="9"
+                Grid.Column="2"
+                Source="youtube">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="youtubeTapped" />
+                </Image.GestureRecognizers>
+            </Image>
+            <Image
+                Grid.Row="9"
+                Grid.Column="3"
+                Source="twitch">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="twitchTapped" />
+                </Image.GestureRecognizers>
+            </Image>
+        </Grid>
+    </StackLayout>
+</ContentPage>

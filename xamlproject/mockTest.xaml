@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="xamlproject.mockTest"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <StackLayout
+        x:Name="windows"
+        Padding="20"
+        BackgroundColor="Black"
+        Spacing="10">
+        <Grid
+            x:Name="loginField"
+            HorizontalOptions="Center"
+            VerticalOptions="CenterAndExpand">
+            <Image
+                Grid.ColumnSpan="5"
+                HeightRequest="100"
+                HorizontalOptions="Center"
+                Source="windows"
+                VerticalOptions="Center" />
+            <ActivityIndicator
+                x:Name="loading"
+                Grid.Row="1"
+                Grid.ColumnSpan="5"
+                IsRunning="False"
+                VerticalOptions="Center"
+                Color="White" />
+            <Entry
+                x:Name="password"
+                Grid.Row="1"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                BackgroundColor="#AAAA"
+                HeightRequest="40"
+                HorizontalTextAlignment="End"
+                IsPassword="True"
+                Placeholder="Password. . ."
+                PlaceholderColor="White"
+                VerticalOptions="Center" />
+            <Button
+                x:Name="login"
+                Grid.Row="2"
+                Grid.Column="3"
+                Text="login"
+                VerticalOptions="Start" />
+        </Grid>
+        <Image
+            HeightRequest="50"
+            HorizontalOptions="End"
+            Source="shutdown">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="shutdownTapped" />
+            </Image.GestureRecognizers>
+        </Image>
+    </StackLayout>
+</ContentPage>

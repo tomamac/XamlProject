@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="xamlproject.achievementPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    NavigationPage.HasNavigationBar="False">
+    <ScrollView BackgroundColor="#333">
+        <StackLayout
+            Padding="20"
+            HorizontalOptions="Center"
+            Spacing="20">
+            <Label
+                FontSize="24"
+                HorizontalTextAlignment="Center"
+                Text="List of achievements"
+                TextColor="White" />
+            <Image Source="achievement" WidthRequest="350" />
+            <Image Source="cert1" WidthRequest="350" />
+            <Image Source="cert2" WidthRequest="350" />
+            <Image Source="cert3" WidthRequest="350" />
+            <Image Source="cert4" WidthRequest="350" />
+            <Image Source="cert5" WidthRequest="350" />
+            <Image Source="cert6" WidthRequest="350" />
+            <ScrollView HeightRequest="225" VerticalScrollBarVisibility="Never">
+                <StackLayout HeightRequest="345">
+                    <Image Source="mc" WidthRequest="350" />
+                    <Grid
+                        Margin="0,-16,0,0"
+                        Padding="10"
+                        HorizontalOptions="Center"
+                        VerticalOptions="End">
+                        <BoxView Color="BurlyWood" />
+                        <Frame>
+                            <Frame.Background>
+                                <LinearGradientBrush EndPoint="1,0">
+                                    <GradientStop Offset="0" Color="#555" />
+                                    <GradientStop Offset="0.25" Color="#222" />
+                                    <GradientStop Offset="0.50" Color="#222" />
+                                    <GradientStop Offset="0.75" Color="#222" />
+                                    <GradientStop Offset="1" Color="#555" />
+                                </LinearGradientBrush>
+                            </Frame.Background>
+                        </Frame>
+                        <AbsoluteLayout>
+                            <Image AbsoluteLayout.LayoutBounds="10,20,90,80" Source="money1" />
+                            <Image AbsoluteLayout.LayoutBounds="250,20,100,80" Source="money2" />
+                        </AbsoluteLayout>
+                        <BoxView
+                            CornerRadius="20"
+                            HeightRequest="100"
+                            HorizontalOptions="Center"
+                            WidthRequest="100"
+                            Color="Gray" />
+                        <Button
+                            x:Name="button"
+                            CornerRadius="10"
+                            HeightRequest="50"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            WidthRequest="50" />
+                    </Grid>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

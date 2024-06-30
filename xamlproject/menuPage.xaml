@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="xamlproject.menuPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="flyout">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="220" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <BoxView Color="#0CC" />
+        <StackLayout
+            Padding="10"
+            HorizontalOptions="End"
+            VerticalOptions="End">
+            <Image
+                HeightRequest="100"
+                HorizontalOptions="End"
+                Source="Amo"
+                WidthRequest="100" />
+            <Label Text="Warach Weeraphan" TextColor="#FFF" />
+            <Label
+                HorizontalOptions="End"
+                Text="2113110429"
+                TextColor="#FFF" />
+        </StackLayout>
+        <StackLayout
+            Grid.Row="1"
+            Padding="10"
+            BackgroundColor="#A5A5DD">
+            <Button
+                x:Name="homeButton"
+                BackgroundColor="#0000"
+                HorizontalOptions="Start"
+                ImageSource="homeicon"
+                Opacity="0.8"
+                Text="Home" />
+            <Button
+                BackgroundColor="#0000"
+                HorizontalOptions="Start"
+                ImageSource="stack"
+                Opacity="0.8"
+                Text="Stack" />
+            <Button
+                BackgroundColor="#0000"
+                HorizontalOptions="Start"
+                ImageSource="grid"
+                Opacity="0.8"
+                Text="Grid" />
+            <Button
+                x:Name="navButton"
+                BackgroundColor="#0000"
+                HorizontalOptions="Start"
+                ImageSource="nav"
+                Opacity="0.8"
+                Text="NavPage" />
+            <Button
+                x:Name="tabButton"
+                BackgroundColor="#0000"
+                HorizontalOptions="Start"
+                ImageSource="tab"
+                Opacity="0.8"
+                Text="Tab" />
+            <Button
+                x:Name="youtubeButton"
+                BackgroundColor="#0000"
+                HorizontalOptions="Start"
+                ImageSource="youtube"
+                Opacity="0.8"
+                Text="Youtube" />
+            <Button
+                x:Name="profileButton"
+                BackgroundColor="#0000"
+                HorizontalOptions="Start"
+                ImageSource="profile"
+                Opacity="0.8"
+                Text="Contact us" />
+        </StackLayout>
+    </Grid>
+</ContentPage>
